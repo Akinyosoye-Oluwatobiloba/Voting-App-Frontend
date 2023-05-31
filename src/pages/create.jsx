@@ -13,7 +13,7 @@ export default function Create() {
  <div className='relative top-5 flex flex-row w-full'>
  <a href="/" className="flex no-underline items-center ml-6 pl-2.5 mb-5">
          {/* <img src="./hi.svg" className="h-6 mr-3 sm:h-7" alt="Cipher Polls" /> */}
-         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Cipher Polls</span>
+         <span className="self-center text-xl font-semibold whitespace-nowrap ">Cipher Polls</span>
       </a>
 
    <div className={styles.login__sign}>

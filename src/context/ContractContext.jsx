@@ -77,6 +77,7 @@ const ContractProvider = ({ children }) => {
                 return null;
             }
     }
+    // create vote
         const handleSubmit = async (event) => {          
             event.preventDefault();
             const candidateNamesArray = candidateNames.split(',');
@@ -105,6 +106,7 @@ const ContractProvider = ({ children }) => {
             console.log(error)
             }
         }
+        //cast vote
         const Submit = async (event) => {
             event.preventDefault();
             try{
@@ -127,7 +129,7 @@ const ContractProvider = ({ children }) => {
             }
           };
 
-
+          //result
           const fetchVotes = async () => {
             try {
               const contract = await connectToSmartContract();
@@ -165,10 +167,10 @@ const ContractProvider = ({ children }) => {
             }
           };
         
-    useEffect(()=>{
-        connectToSmartContract();
-        fetchVotes();
-    },[]);
+    // useEffect(()=>{
+    //     connectToSmartContract();
+    //     fetchVotes();
+    // },[]);
 
       return(
         <ContractContext.Provider value = {{Submit,votes,error,fetchVotes,setError,description,image,setDescription,setImage,selectedCandidate, setSelectedCandidate,connectWallet,currentAccount,handleSubmit,voteIndex,setVoteIndex,title,setTitle,candidateNames,setCandidateNames,duration,setDuration}}>
